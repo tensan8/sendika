@@ -1,0 +1,42 @@
+@use "../utilities/variables";
+
+
+div {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+svg {
+    line {
+        stroke-width: 5;
+        stroke: variables.$grey;
+
+    }
+
+    circle {
+        stroke-width: 5;
+        stroke: variables.$grey;
+
+    }
+
+    text {
+        font-size: 1.2rem;
+        fill: variables.$text-white;
+    }
+}
+
+.active-progress {
+    fill: variables.$grey;
+}
+
+.inactive-progress {
+    fill: variables.$inactive_color;
+    stroke: variables.$inactive_color;
+}
+
+.inactive-text {
+    fill: variables.$inactive_color;
+}
+

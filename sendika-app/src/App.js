@@ -1,14 +1,16 @@
 import './assets/css/App.scss';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import NavBar from './components/NavBar'
+import UploadProcess from './pages/UploadProcess';
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <NavBar/>
+        {/* <NavBar/> */}
         <Switch>
-          <Route exact path='/'>
+          {/* Temporary home path nya langsung ke path Upload */}
+          <Route exact path='/' component={UploadProcess}>
 
           </Route>
         </Switch>
