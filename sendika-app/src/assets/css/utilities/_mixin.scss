@@ -1,0 +1,8 @@
+// Use this files to write all the pre-defined stylings
+// the @include it according to your needs
+
+@mixin navbar-text{
+    color: white;
+    text-decoration: none;
+    font-family: Staatliches, sans-serif;
+}

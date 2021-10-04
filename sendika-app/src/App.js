@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        {/* <NavBar/> */}
+        <NavBar />
         <Switch>
           {/* Temporary home path nya langsung ke path Upload */}
           <Route exact path='/' component={UploadProcess}>
