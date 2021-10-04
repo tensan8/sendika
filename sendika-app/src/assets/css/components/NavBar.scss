@@ -3,29 +3,31 @@
 
 .row {
     display: flex;
-    width: parent;
+    width: 100%;
+    align-items: center;
     margin-top: 0rem;
     padding-bottom: 1rem;
+    margin: 0 auto;
     
-
     .column {
         flex: 30% 70%;
         width: 100%;
+        text-align: left;
 
         .navTitle{
             @include navbar-text;
             font-size: 3.5rem;
             width: 100%;
-            text-align: left;
-            padding-left: 2rem;
+            padding-left: 5rem;
         }
 
         table {
             font-size: 1.8rem;
             padding-right: 7rem;
+            height: 100%;
 
             td {
-                padding: 0 5rem;
+                padding: 0 4rem;
             }
 
             .navText{
