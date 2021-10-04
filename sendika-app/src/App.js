@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import NavBar from './components/NavBar'
 import UploadProcess from './pages/UploadProcess';
 import Home from './pages/Home';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
@@ -11,13 +12,17 @@ function App() {
         {/* <NavBar/> */}
         <Switch>
           {/* Temporary home path nya langsung ke path Upload */}
-          <Route exact path={['/', '/:slug']}>
+          <Route exact path={['/', '/csv']}>
             <UploadProcess/>
             {/* <Home/> */}
           </Route>
           {/* <Route exact path={['/upload', '/upload/:slug']}>
             <UploadProcess/>
           </Route> */}
+
+          <Route>
+            <NotFound/>
+          </Route>
         </Switch>
       </Router>
     </div>

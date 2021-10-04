@@ -7,13 +7,13 @@ import { Route, useRouteMatch } from 'react-router'
 
 function UploadProcess() {
     const match = useRouteMatch()
+    console.log(match)
     return (
         <div className="upload-process-div">
             <StatusTracker status="upload"/>
 
-            {/* {match.params.slug === "csv" : } */}
             
-            {match.params.slug === "csv" && 
+            {match.path === "/csv" && 
                 <>
                     <div className="upload-box">
                         <MySvg />
