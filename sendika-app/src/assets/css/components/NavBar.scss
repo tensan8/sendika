@@ -1,19 +1,42 @@
-// div {
-//     display: flex;
-//     flex-basis: 50%;
+// Stylings for navigation bar
+@import "../utilities/mixin";
 
-//     title {
-        
-//     }
-//     .links {
-        // display: flex;
+.row {
+    display: flex;
+    width: parent;
+    margin-top: 0rem;
+    padding-bottom: 1rem;
+    
 
-        // li {
-            
-        //     color: white;
-        // }
-//     }
-// }
+    .column {
+        flex: 30% 70%;
+        width: 100%;
+
+        .navTitle{
+            @include navbar-text;
+            font-size: 3.5rem;
+            width: 100%;
+            text-align: left;
+            padding-left: 2rem;
+        }
+
+        table {
+            font-size: 1.8rem;
+            padding-right: 7rem;
+
+            td {
+                padding: 0 5rem;
+            }
+
+            .navText{
+                @include navbar-text;
+            }
+        }
+    }
+
+    text-shadow: 0.25rem 0.3rem 0.3rem rgba(0, 0, 0, 0.4);
+    
+}
 
 
 
