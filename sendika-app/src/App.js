@@ -4,6 +4,7 @@ import NavBar from './components/NavBar'
 import UploadProcess from './pages/UploadProcess';
 import Home from './pages/Home';
 import NotFound from './components/NotFound';
+import ChooseModel from './pages/ChooseModel';
 
 function App() {
   return (
@@ -19,6 +20,14 @@ function App() {
           {/* <Route exact path={['/upload', '/upload/:slug']}>
             <UploadProcess/>
           </Route> */}
+
+          <Route path="/Home">
+            <Home />
+          </Route>
+
+          <Route path="/ChooseModel">
+            <ChooseModel />
+          </Route>
 
           <Route>
             <NotFound/>

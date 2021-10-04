@@ -1,0 +1,34 @@
+// This is the styling for glass card
+
+.glass {
+    background-color: white;
+    width: 25rem;
+    height: 25rem;
+    margin: 2rem auto;
+    border-radius: 1.5rem;
+    border: 0.01rem solid #fff;
+
+    h1 {
+        color: black;
+        text-align: center;
+        text-shadow: none;
+    }
+
+    p, a {
+        color: black;
+        text-shadow: none;
+        padding: 0 2rem;
+        font-size: 1.25rem;
+        text-decoration: none;
+        transition: ease 1s;
+    }
+
+    span {
+        background: linear-gradient(black 0 0) 0 100% /var(--d, 0) 0.2rem no-repeat;
+        transition: 0.7s;
+
+        &:hover {
+            --d: 100%;
+        }
+    }
+}

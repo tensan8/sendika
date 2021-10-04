@@ -15,7 +15,7 @@
         text-align: left;
 
         .navTitle{
-            @include navbar-text;
+            @include navbar-text; //You can look for this styling in the mixin file
             font-size: 3.5rem;
             width: 100%;
             padding-left: 5rem;
@@ -36,6 +36,7 @@
         }
     }
 
+    // for both the menu and the title
     text-shadow: 0.25rem 0.3rem 0.3rem rgba(0, 0, 0, 0.4);
     
 }
