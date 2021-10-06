@@ -1,0 +1,55 @@
+@use "../utilities/variables";
+
+.menu {
+    background: #ffffff;
+    border-radius: 0.5rem;
+    position: absolute;
+    width: 11rem;
+    text-align: left;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-0.5rem); 
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        &:nth-child(1){
+            border-bottom: 0.25rem solid variables.$primary_color;
+        }
+
+        padding: 0.6rem 0.3rem;
+
+        .dropDownContent {
+            color: variables.$text-black;
+            text-decoration: none;
+            font-family: Staatliches, sans-serif;
+            text-shadow: none;
+        }
+    }
+}
+
+.menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); 
+}
+
+.column.up {
+    transform: rotate(180deg);
+    transition: ease 0.4s;
+    width: 1.5rem;
+    filter: drop-shadow(-0.2rem -0.25rem 0.12rem rgb(0 0 0 / 0.4))
+}
+
+.column.down {
+    transform: rotate(0deg);
+    transition: ease 0.4s;
+    width: 1.5rem;
+    filter: drop-shadow(0.2rem 0.25rem 0.12rem rgb(0 0 0 / 0.4))
+}

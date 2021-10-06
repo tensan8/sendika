@@ -23,11 +23,20 @@
 
         table {
             font-size: 1.8rem;
-            padding-right: 7rem;
+            padding-right: 3rem;
             height: 100%;
 
             td {
                 padding: 0 4rem;
+
+                .row {
+                    padding-bottom: 0rem;
+                    cursor: pointer;
+
+                    .column {
+                        padding: 0 0.4rem;
+                    }
+                }
             }
 
             .navText{
