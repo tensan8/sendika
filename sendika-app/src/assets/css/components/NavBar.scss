@@ -1,7 +1,7 @@
 // Stylings for navigation bar
 @import "../utilities/mixin";
 
-.row {
+.row { //Make everything to be in the same line (easier to position)
     display: flex;
     width: 100%;
     align-items: center;
@@ -9,7 +9,7 @@
     padding-bottom: 1rem;
     margin: 0 auto;
     
-    .column {
+    .column { //Split the navbar for wider right side
         flex: 30% 70%;
         width: 100%;
         text-align: left;
@@ -21,7 +21,7 @@
             padding-left: 5rem;
         }
 
-        table {
+        table { //The menu on the right side of the navigation bar
             font-size: 1.8rem;
             padding-right: 3rem;
             height: 100%;

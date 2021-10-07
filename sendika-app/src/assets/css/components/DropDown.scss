@@ -1,6 +1,6 @@
 @use "../utilities/variables";
 
-.menu {
+.menu { //The dropdown box
     background: #ffffff;
     border-radius: 0.5rem;
     position: absolute;
@@ -12,6 +12,7 @@
     transform: translateY(-0.5rem); 
     transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
 
+    //The dropdown list
     ul {
         list-style: none;
         padding: 0;
@@ -19,13 +20,13 @@
     }
 
     li {
-        &:nth-child(1){
+        &:nth-child(1){ //The line under the first option
             border-bottom: 0.25rem solid variables.$primary_color;
         }
 
         padding: 0.6rem 0.3rem;
 
-        .dropDownContent {
+        .dropDownContent { //The options text
             color: variables.$text-black;
             text-decoration: none;
             font-family: Staatliches, sans-serif;
@@ -34,12 +35,14 @@
     }
 }
 
+// When the menu is clicked, it will add the active class
 .menu.active {
     opacity: 1;
     visibility: visible;
     transform: translateY(0); 
 }
 
+// Up arrow
 .column.up {
     transform: rotate(180deg);
     transition: ease 0.4s;
@@ -47,6 +50,7 @@
     filter: drop-shadow(-0.2rem -0.25rem 0.12rem rgb(0 0 0 / 0.4))
 }
 
+// Down arrow
 .column.down {
     transform: rotate(0deg);
     transition: ease 0.4s;

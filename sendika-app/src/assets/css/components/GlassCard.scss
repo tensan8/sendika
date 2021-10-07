@@ -1,20 +1,21 @@
 // This is the styling for glass card
+@import "../utilities/mixin";
 
-.glass {
-    background-color: white;
+.glass { //The card itself
     width: 25rem;
     height: 25rem;
     margin: 2rem auto;
-    border-radius: 1.5rem;
-    border: 0.01rem solid #fff;
+    @include card-styling;
+    cursor: pointer;
 
-    h1 {
+
+    h1 { //The model name
         color: black;
         text-align: center;
         text-shadow: none;
     }
 
-    p, a {
+    p, a { //the content
         color: black;
         text-shadow: none;
         padding: 0 2rem;
@@ -23,7 +24,7 @@
         transition: ease 1s;
     }
 
-    span {
+    span { //the animation when hovering the link to the model documentation
         background: linear-gradient(black 0 0) 0 100% /var(--d, 0) 0.2rem no-repeat;
         transition: 0.7s;
 

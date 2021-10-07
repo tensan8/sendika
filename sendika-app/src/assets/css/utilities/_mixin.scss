@@ -6,3 +6,9 @@
     text-decoration: none;
     font-family: Staatliches, sans-serif;
 }
+
+@mixin card-styling{
+    border-radius: 0.75rem;
+    border: 0.01rem solid #fff;
+    background-color: white;
+}

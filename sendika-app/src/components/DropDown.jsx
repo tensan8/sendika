@@ -6,18 +6,21 @@ import { UseDetectOutsideClick } from './UseDetectOutsideClick';
 
 
 const DropDown = (props) => {
-    const { firstPath, secondPath } = props;
-    const dropdownRef = useRef(null);
-    const [isActive, setIsActive] = UseDetectOutsideClick(dropdownRef, false);
-    const showMenu = () => setIsActive(!isActive);
+    const { firstPath, secondPath } = props; //Takes the path for each option
+    const dropdownRef = useRef(null); //Will be used to help detecting the click outside of the dropdown
+    const [isActive, setIsActive] = UseDetectOutsideClick(dropdownRef, false); //Determine whether the box should be active or not
+    const showMenu = () => setIsActive(!isActive); //Toggle the active status of dropdown
 
     return (
         <div className={"wrapper"}>
+            {/* This div will be the one in the nav bar (header) */}
             <div className={"row"} onClick={showMenu}>
                 <span className={"navText column"}>Upload</span>
                 <img src={dropDownIcon} alt="drop down arrow" className={`column ${isActive ? 'up' : 'down'}`}/>   
             </div>
 
+            {/* This will define the dropdown menu */}
+            {/* You can change the path in the navbar file */}
             <nav ref={dropdownRef} className={`menu ${isActive ? 'active' : 'inactive'}`}>
                 <ul>
                     <li><Link to={firstPath} className={"dropDownContent"}>CSV File</Link></li>

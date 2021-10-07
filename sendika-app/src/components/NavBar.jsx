@@ -30,7 +30,10 @@ function NavBar() {
                         <Link to="/" className={"navText"}>Home</Link>
                     </td>
                     <td>
+
+                        {/* Please change the path here */}
                         <DropDown firstPath="/ChooseModel" secondPath="/ChooseModel" />
+                        
                     </td>
                     <td>
                         <Link to="/about" className={"navText"}>About</Link>

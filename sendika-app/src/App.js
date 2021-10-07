@@ -5,6 +5,7 @@ import UploadProcess from './pages/UploadProcess';
 import Home from './pages/Home';
 import NotFound from './components/NotFound';
 import ChooseModel from './pages/ChooseModel';
+import SingleSmileOutput from './pages/SingleSmileOutput';
 
 function App() {
   return (
@@ -27,6 +28,10 @@ function App() {
 
           <Route path="/ChooseModel">
             <ChooseModel />
+          </Route>
+
+          <Route path="/SingleSmileOutput">
+            <SingleSmileOutput />
           </Route>
 
           <Route>

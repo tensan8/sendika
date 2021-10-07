@@ -1,0 +1,49 @@
+@use "../utilities/variables";
+@import "../utilities/mixin";
+
+.container{ //The main container (contains 2 cards)
+    margin-top: 4rem;
+
+    // Define the styling for the card
+    .cards {
+        @include card-styling;
+        width: 80%;
+        height: fit-content;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+    
+        h2 { //Number: predicted pIC50
+            font-size: 5rem;
+        }
+    
+        h3 { //Text: pIC50
+            font-size: 2.25rem;
+        }
+    
+        h1 { //Text: Name and Classification
+            text-align: left;
+            color: variables.$teal;
+            font-size: 1.75rem;
+            margin-left: 1.75rem;
+            font-weight: 400;
+        }
+    
+        table { //The images and the text on the second card (the bottom one)
+            padding: 0 2rem;
+            width: 100%;
+            font-family: variables.$roboto;
+            font-weight: lighter;
+    
+            td:last-child { //The molecular properties data
+                padding-left: 2rem;
+                text-align: left;
+                width: 100%;
+            }
+        }
+    
+        strong { //make the strong tag to be a little bit slimmer
+            font-weight: 500;
+        }
+    }
+}
