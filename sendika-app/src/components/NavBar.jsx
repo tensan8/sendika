@@ -32,7 +32,7 @@ function NavBar() {
                     <td>
 
                         {/* Please change the path here */}
-                        <DropDown firstPath="/ChooseModel" secondPath="/ChooseModel" />
+                        <DropDown firstPath="/csv" secondPath="/singleSmile" />
                         
                     </td>
                     <td>

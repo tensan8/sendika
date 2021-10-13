@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import NotFound from './components/NotFound';
 import ChooseModel from './pages/ChooseModel';
 import SingleSmileOutput from './pages/SingleSmileOutput';
+import About from './pages/About';
 
 function App() {
   return (
@@ -14,24 +15,24 @@ function App() {
         <NavBar />
         <Switch>
           {/* Temporary home path nya langsung ke path Upload */}
-          <Route exact path={['/', '/csv']}>
-            <UploadProcess/>
-            {/* <Home/> */}
-          </Route>
-          {/* <Route exact path={['/upload', '/upload/:slug']}>
-            <UploadProcess/>
-          </Route> */}
-
-          <Route path="/Home">
-            <Home />
+          <Route exact path={"/"}>
+            <Home/>
           </Route>
 
-          <Route path="/ChooseModel">
+          <Route exact path={['/csv', '/singleSmile']}>
+            <UploadProcess/>
+          </Route>
+
+          <Route exact path="/ChooseModel">
             <ChooseModel />
           </Route>
 
-          <Route path="/SingleSmileOutput">
+          <Route exact path="/SingleSmileOutput">
             <SingleSmileOutput />
+          </Route>
+
+          <Route exact path="/about">
+            <About/>
           </Route>
 
           <Route>
