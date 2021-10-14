@@ -10,21 +10,38 @@ function StatusSetter(props) {
     const {right, left, rightLink, leftLink} = props
 
 
+    
     return (
-        <div class="status-setter">
-            {left && 
-                <div class="">
-                    <Link to={leftLink} style={{textDecoration: "none", alignSelf: 'self-end'}}>Prev <LeftSVG/></Link>
-                </div>
-            }
-            {right && 
-                <div class="right-div">
-                    <Link to={rightLink} style={{textDecoration: "none", alignSelf: 'self-end', textAlign: right}}>Next <RightSVG/></Link>
-                </div>
-            }
+        <div className="flex justify-between">      
+            <div className={`left ? "visible" : "invisible" ml-6`}>
+                <Link className="flex items-center" to={leftLink}><div className="inline-block text-white"><LeftSVG/></div> <span className="inline-block text-white text-4xl pl-4" style={{fontFamily: "Staatliches"}}>Prev</span></Link>   
+            </div>
+            <div className={`(right ? "visible" : "invisible") mr-6`}> 
+                <Link className="flex items-center" to={rightLink}><span className="text-white text-4xl pr-4" style={{fontFamily: "Staatliches"}}>Next</span> <div class="inline-block"><RightSVG/></div></Link>          
+            </div>
         </div>
-
     )
+    
+
+
+    // return (
+    //     <div class="flex-row">
+    //         {
+    //             right && left {
+    //                 return 
+    //             }
+    //         }
+    //         <div class="flex justify-start">
+    //             <Link to={leftLink}><span>Prev</span> <LeftSVG/></Link>
+    //         </div>
+        
+        
+    //         <div class="flex justify-end items-center">
+    //             <span>Next</span><Link to={rightLink}><RightSVG/></Link>
+    //         </div>
+    //     </div>
+
+    // )
 }
 
 export default StatusSetter

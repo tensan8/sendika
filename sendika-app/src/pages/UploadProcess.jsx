@@ -24,9 +24,9 @@ function UploadProcess() {
               
             <div className="column-input-box">
                 <p>SMILES Column Name</p>
-                <input type="text"></input>
+                <input className="p-3" type="text"></input>
             </div>
-            <StatusSetter right={true} left={false} rightLink="/ChooseModel" leftLink=""/>
+            <StatusSetter right={true} left={true} rightLink="/ChooseModel" leftLink=""/>
         </div>
     )
 }
