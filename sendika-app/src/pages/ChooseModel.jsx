@@ -74,7 +74,7 @@ function ChooseModel() {
                         let modelName = Object.keys(item)[0]
                         return (
                             <div onClick={handleCardClick(modelName)} key={index} className={`column`}>
-                                <div className="w-auto ring-4">
+                                <div className="w-auto">
                                     <GlassCard 
                                         modelName={modelName}
                                         content={item[modelName]["content"]}

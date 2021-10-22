@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import {Link} from 'react-router-dom'
 import "../assets/css/components/GlassCard.scss"
 import {AddChosenModel} from "../actions/data"
-
+import {useHistory} from 'react-router-dom'
 
 const GlassCard = (props) => {
 
@@ -14,6 +14,10 @@ const GlassCard = (props) => {
 
     const dispatch = useDispatch()
     const [clicked, setClicked] = useState("")
+
+    
+
+    const history = useHistory()
 
     // useEffect(() => {
       
@@ -48,21 +52,19 @@ const GlassCard = (props) => {
     //     // console.log("once")
     // }, [chosenModel])
 
-    // const handleCardClick = (e) => {
-    //     setClicked(props.modelName)
-    //     // temp = props.modelName
-        
-    //     console.log("Redux: " + chosenModel)
-    //     console.log("Clicked: " + clicked + "\n\n")
-    //     // setClick(true)
-    // }
+    const handleCardClick = (e) => {
+        history.push("/loading")
+        dispatch(AddChosenModel(props.modelName))
+    }
+
+    
 
     
 
     return (
         // This class will show one card only (especially for the model card)
         // Please define the value in the ChooseModel.jsx file
-        <div className={`glass rounded relative`}>
+        <div onClick={handleCardClick} className={`glass rounded relative`}>
          
             <h1 className=" font-bold text-3xl tracking-wider my-5">{props.modelName}</h1> 
             <p className="">{props.content}</p>

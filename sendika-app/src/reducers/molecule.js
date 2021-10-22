@@ -1,8 +1,12 @@
 import React from 'react'
 
+/***
+ * Storing the received image from the Public Chembl API
+ */
+
 const moleculeReducer = (molecule = {}, action) => {
     switch (action.type) {
-        case 'FETCH_MOLECULE':
+        case 'FETCH_IMAGE':
             return action.payload
         default:
             return molecule

@@ -7,7 +7,7 @@ import StatusSetter from '../components/StatusSetter'
 import { useDispatch, useSelector  } from 'react-redux';
 import {InsertSMILE} from '../actions/singleSmile'
 import {AddChosenType} from '../actions/data'
-
+import {clear} from '../actions/model'
 
 function UploadProcess() {
     const match = useRouteMatch()
@@ -20,6 +20,10 @@ function UploadProcess() {
         // console.log(e.target.value)
         setSmileState(e.target.value)
     }
+
+    useEffect(() => {
+        dispatch(clear())
+    }, [])
 
     useEffect(() => {
         dispatch(InsertSMILE(smileState))

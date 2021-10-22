@@ -1,18 +1,38 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import StatusTracker from '../components/StatusTracker'
 import '../assets/css/pages/Loading.scss'
 import { Redirect } from 'react-router-dom'
+import {getSinglePrediction} from '../actions/model'
+import { useHistory } from 'react-router-dom'
+
+
 
 
 function Loading() {
-    const chosenMethod = useSelector(state => state.data)
+    const chosenData = useSelector(state => state.data)
+    const smile = useSelector(state => state.singleSmile)
+
+    const dispatch = useDispatch()
 
     const resultPrediction = useSelector(state => state.mlModel)
     const [loading, setLoading] = useState(true)
 
+    
+
+    const history = useHistory()
+
+    // console.log(resultPrediction)
+
     useEffect(() => {
-        if (!Object.keys(resultPrediction).length === 0) {
+        if (Object.keys(smile).length > 0 && Object.keys(chosenData).length > 0) {
+            dispatch(getSinglePrediction(chosenData, smile["molecule_structures"]["canonical_smiles"]))
+        }
+        // history.push("/SingleSmileOutput")
+    }, [chosenData, smile, dispatch])
+
+    useEffect(() => {
+        if (Object.keys(resultPrediction).length > 0) {
             setLoading(false)
         }
         else {
@@ -35,11 +55,11 @@ function Loading() {
                 </>
             }
 
-            {(!loading && chosenMethod === "singleSmile") &&
+            {(!loading && chosenData["type"] === "singleSmile") &&
                 <Redirect exact to="/SingleSmileOutput"/>
             }
 
-            {(!loading && chosenMethod === "csv") &&
+            {(!loading && chosenData["type"] === "csv") &&
                 <Redirect exact to="/"/>
             }
         

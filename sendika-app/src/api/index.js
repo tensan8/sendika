@@ -11,7 +11,8 @@ export const predictSingleSmile = (smile) => axios.post(`${url}/predict-single-s
 
 // console.log(chemblURL)
 const getMoleculeDetail = (temp) => axios.get(`${chemblURL}/molecule/${temp}`)
-const getMoleculeImage = (temp) => axios.get(`${chemblURL}/image/${temp}`)
+export const getMoleculeImage = (temp) => axios.get(`${chemblURL}/image/${temp}`)
+
 
 
 export const getMolecule = async (temp) => {
@@ -35,5 +36,20 @@ export const getChemblID = async (data) => {
         console.log(`API Side: ${error}`)
     }
 }
+
+// 'smile_name': 'O=C(\C=C\c1ccc(O)c(OC)c1)CC(=O)\C=C\c2cc(OC)c(O)cc2'
+
+export const getSinglePrediction = async (datas, smile) => {
+    try {
+        const response = await axios.post("http://127.0.0.1:8000/model/predict-single-smile/", {
+            "smile_name": smile,
+            "model": datas["model"]
+        })
+        return response
+    } catch (error) {
+        console.log(error.message)
+    }
+}
+
 
 

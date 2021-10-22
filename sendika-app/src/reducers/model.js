@@ -1,11 +1,19 @@
 import React from 'react'
 
-const model = (model = {}, action) => {
+/***
+ * Reducer for storing the prediction result received from backend
+ */
+
+const model = (state = {}, action) => {
     switch (action.type) {
-        case 'FETCH_ALL': 
-            return action.payload;
+        // Getting single prediction result
+        case 'GET_SINGLE_PREDICTION':
+            return action.payload["data"]
+        // Clearing the state for this reducer so the loading page will work
+        case 'CLEAR':
+            return {}
         default:
-            return model
+            return state
     }
 }
 
