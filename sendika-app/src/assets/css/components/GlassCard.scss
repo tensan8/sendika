@@ -3,7 +3,7 @@
 
 .glass { //The card itself
     width: 25rem;
-    height: 25rem;
+    height: 26rem;
     margin: 2rem auto;
     @include card-styling;
     cursor: pointer;
@@ -24,12 +24,16 @@
         transition: ease 1s;
     }
 
-    span { //the animation when hovering the link to the model documentation
-        background: linear-gradient(black 0 0) 0 100% /var(--d, 0) 0.2rem no-repeat;
-        transition: 0.7s;
-
-        &:hover {
-            --d: 100%;
-        }
+    a {
+        padding: 0 1rem;
     }
+
+    // span { //the animation when hovering the link to the model documentation
+    //     background: linear-gradient(black 0 0) 0 100% /var(--d, 0) 0.2rem no-repeat;
+    //     transition: 0.7s;
+
+    //     &:hover {
+    //         --d: 100%;
+    //     }
+    // }
 }

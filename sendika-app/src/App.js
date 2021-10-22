@@ -7,6 +7,7 @@ import NotFound from './components/NotFound';
 import ChooseModel from './pages/ChooseModel';
 import SingleSmileOutput from './pages/SingleSmileOutput';
 import About from './pages/About';
+import Loading from './pages/Loading';
 
 function App() {
   return (
@@ -33,6 +34,10 @@ function App() {
 
           <Route exact path="/about">
             <About/>
+          </Route>
+
+          <Route exact path="/loading">
+            <Loading/>
           </Route>
 
           <Route>

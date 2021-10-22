@@ -21,7 +21,7 @@ const DropDown = (props) => {
 
             {/* This will define the dropdown menu */}
             {/* You can change the path in the navbar file */}
-            <nav ref={dropdownRef} className={`menu ${isActive ? 'active' : 'inactive'}`}>
+            <nav ref={dropdownRef} className={`menu ${isActive ? 'active' : 'inactive'} z-50`}>
                 <ul>
                     <li><Link to={firstPath} className={"dropDownContent"}>CSV File</Link></li>
                     <li><Link to={secondPath} className={"dropDownContent"}>Single SMILE</Link></li>

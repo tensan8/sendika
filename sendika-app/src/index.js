@@ -6,6 +6,7 @@ import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
 import thunk from 'redux-thunk'
+import 'material-icons/iconfont/material-icons.css'
 
 import {reducers} from './reducers'
 

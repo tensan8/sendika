@@ -11,8 +11,8 @@ function StatusTracker(props) {
     const [currStatus, setCurrStatus] = useState(props.status)
 
     return (
-        <div className="status-tracker-div">
-            <svg width="800" height="73" viewBox="0 0 675 73" fill="none">
+        <div className="flex justify-center items-center align-middle text-center">
+            <svg className="relative h-full w-full transform -translate-x-3/4 left-3/4" viewBox="-165 0 1000 90" fill="none">
                 <circle className={`${(currStatus === availableStatus.status_upload) ? 'active-progress' : 'inactive-progress'}`} cx="18" cy="18" r="15.5"/>
                 <circle className={`${currStatus === availableStatus.status_result ? 'active-progress' : ''}`} cx="658" cy="18" r="15.5"/>
                 <circle className={`${currStatus === availableStatus.status_choose_model ? 'active-progress' : ''} ${currStatus === availableStatus.status_result ? 'inactive-progress' : ''}`} cx="338" cy="18" r="15.5"/>

@@ -1,12 +1,12 @@
 @use "../utilities/variables";
 
 
-.status-tracker-div {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-top: 1rem;
-}
+// .status-tracker-div {
+//     display: flex;
+//     justify-content: center;
+//     text-align: center;
+//     margin-top: 1rem;
+// }
 
 svg {
     line {
@@ -17,7 +17,6 @@ svg {
     circle {
         stroke-width: 5;
         stroke: variables.$grey;
-
     }
 
     text {
