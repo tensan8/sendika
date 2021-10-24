@@ -1,5 +1,5 @@
 import { useHistory } from 'react-router-dom'
-import React, { useEffect } from 'react'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
 import OutputCards from '../components/OutputCards'
 import StatusTracker from '../components/StatusTracker'
 import { useDispatch, useSelector } from 'react-redux'

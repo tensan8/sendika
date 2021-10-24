@@ -57,7 +57,7 @@ function UploadProcess() {
                 </div> 
             }
             
-            <StatusSetter right={true} left={true} rightLink="/ChooseModel" leftLink=""/>
+            <StatusSetter right={smileState.trim() ? true : false} left={true} rightLink="/ChooseModel" leftLink=""/>
         </div>
     )
 }

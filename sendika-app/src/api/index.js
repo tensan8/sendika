@@ -30,7 +30,7 @@ export const getChemblID = async (data) => {
         const response = await axios.get(`${chemblURL}/molecule`, {params: {
             molecule_structures_canonical_smiles_flexmatch: data
         }})
-        // console.log("here" + response)
+
         return response
     } catch (error) {
         console.log(`API Side: ${error}`)
@@ -45,6 +45,7 @@ export const getSinglePrediction = async (datas, smile) => {
             "smile_name": smile,
             "model": datas["model"]
         })
+        //console.log(smile)
         return response
     } catch (error) {
         console.log(error.message)

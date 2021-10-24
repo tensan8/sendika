@@ -10,6 +10,19 @@ function Loading() {
     const chosenData = useSelector(state => state.data)
     const smile = useSelector(state => state.singleSmile)
 
+    var chemSmile = '';
+    var indexer = 0;
+
+    while(true) {
+        if(smile[(indexer+1).toString()] != undefined) {
+            chemSmile = chemSmile + smile[indexer.toString()];
+            indexer++;
+        } else {
+            chemSmile = chemSmile + smile[indexer.toString()];
+            break;
+        }
+    }
+
     const dispatch = useDispatch()
 
     const resultPrediction = useSelector(state => state.mlModel)
@@ -17,7 +30,7 @@ function Loading() {
 
     useEffect(() => {
         if (Object.keys(smile).length > 0 && Object.keys(chosenData).length > 0) {
-            dispatch(getSinglePrediction(chosenData, smile["molecule_structures"]["canonical_smiles"]))
+            dispatch(getSinglePrediction(chosenData, chemSmile))
         }
         // history.push("/SingleSmileOutput")
     }, [chosenData, smile, dispatch])

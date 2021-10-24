@@ -11,6 +11,7 @@ const OutputCards = (props) => {
     const smile = useSelector(state => state.singleSmile)
     const image = useSelector(state => state.chembl)
 
+    console.log(smile)
     const history = useHistory()
 
     useEffect(() => {
