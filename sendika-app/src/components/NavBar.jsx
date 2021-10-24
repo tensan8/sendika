@@ -1,17 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {Link} from 'react-router-dom'
 import "../assets/css/components/NavBar.scss"
-import dropDownIcon from "../assets/svg/down_arrow.svg"
 import DropDown from './DropDown';
 
-function NavBar() {
-    const [isShowingMenu, setShowMenu] = useState(false);
-
-    const showMenu = (e) => {
-        e.preventDefault();
-        setShowMenu(!isShowingMenu);
-    }
-    
+function NavBar() {  
     return (
     // The row will make everything to be in the same line
     <div className={"row"}>
@@ -30,10 +22,7 @@ function NavBar() {
                         <Link to="/" className={"navText"}>Home</Link>
                     </td>
                     <td>
-
-                        {/* Please change the path here */}
-                        <DropDown firstPath="/csv" secondPath="/singleSmile" />
-                        
+                        <DropDown firstPath="/notFound" secondPath="/singleSmile" />
                     </td>
                     <td>
                         <Link to="/about" className={"navText"}>About</Link>

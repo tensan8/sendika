@@ -5,12 +5,9 @@ import {Link} from 'react-router-dom'
 
 import '../assets/css/components/StatusSetter.scss'
 
-
 function StatusSetter(props) {
-    const {right, left, rightLink, leftLink} = props
+    const {rightLink, leftLink} = props
 
-
-    
     return (
         <div className="flex justify-between">      
             <div className={`left ? "visible" : "invisible" ml-6`}>
@@ -21,27 +18,6 @@ function StatusSetter(props) {
             </div>
         </div>
     )
-    
-
-
-    // return (
-    //     <div class="flex-row">
-    //         {
-    //             right && left {
-    //                 return 
-    //             }
-    //         }
-    //         <div class="flex justify-start">
-    //             <Link to={leftLink}><span>Prev</span> <LeftSVG/></Link>
-    //         </div>
-        
-        
-    //         <div class="flex justify-end items-center">
-    //             <span>Next</span><Link to={rightLink}><RightSVG/></Link>
-    //         </div>
-    //     </div>
-
-    // )
 }
 
 export default StatusSetter

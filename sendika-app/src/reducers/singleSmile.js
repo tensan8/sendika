@@ -1,5 +1,3 @@
-import React from 'react'
-
 /***
  * Reducer for storing the data from Chembl Public API 
  * to write the details regarding inserted smile in the Result page

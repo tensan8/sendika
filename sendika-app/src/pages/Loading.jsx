@@ -4,9 +4,6 @@ import StatusTracker from '../components/StatusTracker'
 import '../assets/css/pages/Loading.scss'
 import { Redirect } from 'react-router-dom'
 import {getSinglePrediction} from '../actions/model'
-import { useHistory } from 'react-router-dom'
-
-
 
 
 function Loading() {
@@ -17,12 +14,6 @@ function Loading() {
 
     const resultPrediction = useSelector(state => state.mlModel)
     const [loading, setLoading] = useState(true)
-
-    
-
-    const history = useHistory()
-
-    // console.log(resultPrediction)
 
     useEffect(() => {
         if (Object.keys(smile).length > 0 && Object.keys(chosenData).length > 0) {
@@ -62,7 +53,6 @@ function Loading() {
             {(!loading && chosenData["type"] === "csv") &&
                 <Redirect exact to="/"/>
             }
-        
 
         </div>
     )

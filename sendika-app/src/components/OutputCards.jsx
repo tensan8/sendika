@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useLayoutEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import "../assets/css/components/OutputCards.scss"
 import SVG from 'react-inlinesvg'

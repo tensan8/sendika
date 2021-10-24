@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useRef } from 'react'
 import {Link} from 'react-router-dom'
 import '../assets/css/components/DropDown.scss';
 import dropDownIcon from "../assets/svg/down_arrow.svg"

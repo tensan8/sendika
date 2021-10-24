@@ -1,5 +1,3 @@
-import React from 'react'
-
 /***
  * Reducer for storing the prediction result received from backend
  */

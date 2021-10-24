@@ -1,5 +1,3 @@
-import React from 'react'
-
 /***
  * Reducer for storing 
  * 1. Chosen category for upload process whether CSV or Single Smile

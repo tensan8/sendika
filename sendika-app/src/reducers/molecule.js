@@ -1,5 +1,3 @@
-import React from 'react'
-
 /***
  * Storing the received image from the Public Chembl API
  */
@@ -12,7 +10,5 @@ const moleculeReducer = (molecule = {}, action) => {
             return molecule
     }
 }
-
-
 
 export default moleculeReducer
