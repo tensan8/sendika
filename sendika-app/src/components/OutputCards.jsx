@@ -28,7 +28,7 @@ const OutputCards = (props) => {
             </div>
 
             {/* The bottom card */}
-            <div className={"cards"}>
+            <div className={"cards second"}>
                 <h1 className="nameClassTitle">NAME AND CLASSIFICATION</h1>
                 <table>
                     <tr>

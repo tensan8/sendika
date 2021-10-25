@@ -2,7 +2,7 @@
 @import "../utilities/mixin";
 
 .container{ //The main container (contains 2 cards)
-    margin-top: 4rem;
+    margin: 4rem auto;
 
     // Define the styling for the card
     .cards {
@@ -11,17 +11,20 @@
         height: fit-content;
         margin: 0 auto;
         margin-bottom: 2rem;
+        padding-top: 2rem;
         padding-bottom: 2rem;
+        align-items: center;
+
     
         h2 { //Number: predicted pIC50
-            font-size: 5rem;
+            font-size: 4.5rem;
         }
     
         h3 { //Text: pIC50
             font-size: 2.25rem;
         }
     
-        h1 { //Text: Name and Classification
+        .nameClassTitle { //Text: Name and Classification
             text-align: left;
             color: variables.$teal;
             font-size: 1.75rem;
@@ -30,6 +33,7 @@
         }
     
         table { //The images and the text on the second card (the bottom one)
+            margin-top: 1rem;
             padding: 0 2rem;
             width: 100%;
             font-family: variables.$roboto;
@@ -45,5 +49,9 @@
         strong { //make the strong tag to be a little bit slimmer
             font-weight: 500;
         }
+    }
+
+    .second {
+        padding-top: 1rem;
     }
 }
