@@ -16,18 +16,20 @@ function NavBar() {
         <div className={"column"}>
             {/* Put the navigation menu inside of table for easier styling */}
             <table>
-                {/* consists of 1 row only */}
-                <tr>
-                    <td>
-                        <Link to="/" className={"navText"}>Home</Link>
-                    </td>
-                    <td>
-                        <DropDown firstPath="/notFound" secondPath="/singleSmile" />
-                    </td>
-                    <td>
-                        <Link to="/about" className={"navText"}>About</Link>
-                    </td>
-                </tr>
+                <tbody>
+                    {/* consists of 1 row only */}
+                    <tr>
+                        <td>
+                            <Link to="/" className={"navText"}>Home</Link>
+                        </td>
+                        <td>
+                            <DropDown firstPath="/notFound" secondPath="/singleSmile" />
+                        </td>
+                        <td>
+                            <Link to="/about" className={"navText"}>About</Link>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>

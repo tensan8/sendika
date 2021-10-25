@@ -1,5 +1,7 @@
 // This is the styling for glass card
+@use "../utilities/variables";
 @import "../utilities/mixin";
+
 
 .glass { //The card itself
     width: 25rem;
@@ -7,7 +9,7 @@
     margin: 2rem auto;
     @include card-styling;
     cursor: pointer;
-
+    
 
     h1 { //The model name
         color: black;
@@ -27,13 +29,10 @@
     a {
         padding: 0 1rem;
     }
+}
 
-    // span { //the animation when hovering the link to the model documentation
-    //     background: linear-gradient(black 0 0) 0 100% /var(--d, 0) 0.2rem no-repeat;
-    //     transition: 0.7s;
-
-    //     &:hover {
-    //         --d: 100%;
-    //     }
-    // }
+.focusCard {
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.9);
+    background-color: variables.$grey;
+    transition: ease 0.2s;
 }

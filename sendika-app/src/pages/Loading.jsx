@@ -14,7 +14,7 @@ function Loading() {
     var indexer = 0;
 
     while(true) {
-        if(smile[(indexer+1).toString()] != undefined) {
+        if(smile[(indexer+1).toString()] !== undefined) {
             chemSmile = chemSmile + smile[indexer.toString()];
             indexer++;
         } else {
@@ -33,7 +33,7 @@ function Loading() {
             dispatch(getSinglePrediction(chosenData, chemSmile))
         }
         // history.push("/SingleSmileOutput")
-    }, [chosenData, smile, dispatch])
+    }, [chosenData, smile, chemSmile, dispatch])
 
     useEffect(() => {
         if (Object.keys(resultPrediction).length > 0) {
