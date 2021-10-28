@@ -51,7 +51,7 @@ function NavBar() {
                 <nav className={`${opened ? 'flex' : 'hidden'} flex-col flex-grow pb-4 md:pb-0 md:flex md:justify-end md:flex-row`}>
                     <Link to="/" className="px-4 py-2 mt-2 text-sendika-text-white md:text-base text-sm font-semibold rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">Home</Link>
                     <DropDown firstPath="/notFound" secondPath="/singleSmile" />
-                    <Link to="/" className="px-4 py-2 mt-2 text-sendika-text-white md:text-base text-sm font-semibold rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">About</Link>
+                    <Link to="/about" className="px-4 py-2 mt-2 text-sendika-text-white md:text-base text-sm font-semibold rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">About</Link>
                 </nav>
             </div>
         </div>
