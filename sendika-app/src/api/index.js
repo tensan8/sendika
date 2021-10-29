@@ -45,7 +45,6 @@ export const getSinglePrediction = async (datas, smile) => {
             "smile_name": smile,
             "model": datas["model"]
         })
-        //console.log(smile)
         return response
     } catch (error) {
         console.log(error.message)

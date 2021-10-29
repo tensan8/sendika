@@ -26,11 +26,6 @@ function UploadProcess() {
         setSmileState(e.target.value)
     }
 
-    // const validateSMILE = async (input) => {
-    //     const response = await ValidateSMILE(input)
-    //     console.log(response)
-    // }
-
     useEffect(() => {
         dispatch(clear())
         dispatch(ClearData())
@@ -48,12 +43,6 @@ function UploadProcess() {
                 setMore(false)
             }
         }
-        // if (smileState.trim() !== "") {
-        //     console.log("in")
-        //     dispatch(InsertSMILE(smileState))
-        //     // setMore(true)
-        //     // validateSMILE(smileState)
-        // }
     }, [smileState, dispatch])
 
     if (match.path === "/csv") {
