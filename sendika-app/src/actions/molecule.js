@@ -9,3 +9,7 @@ export const getMoleculeDetail = (temp) => async (dispatch) => {
         console.log(`ACTION Side: ${error}`)
     }
 }
+
+export const ClearImage = () => {
+    return ({type: 'CLEAR_IMAGE'})
+}

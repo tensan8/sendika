@@ -52,5 +52,16 @@ export const getSinglePrediction = async (datas, smile) => {
     }
 }
 
+export const GetMoleculeData = async (data) => {
+    try {
+        const response = await axios.get(`${chemblURL}/substructure/${data}`, {params: {
+            limit: 1
+        }})
+        return response
+    } catch (error) {
+        console.log(error.message)
+    }
+}
+
 
 

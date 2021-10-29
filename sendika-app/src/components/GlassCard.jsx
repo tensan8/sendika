@@ -5,19 +5,10 @@ import {useHistory} from 'react-router-dom'
 
 const GlassCard = (props) => {
 
-    const [click, setClick] = useState(false)
-    const chosenModel = useSelector(state => state.data.model)
-
-    let temp = ""
-
-    const [clicked, setClicked] = useState("")
-
-    const history = useHistory()
-
     return (
         // This class will show one card only (especially for the model card)
         // Please define the value in the ChooseModel.jsx file
-        <div onClick={props.handleCardClick} className={`glass rounded relative ` + (props.status ? `focusCard` : null)}>
+        <div onClick={props.handleCardClick} className={`glass overflow-hidden rounded relative ` + (props.status ? `focusCard` : null)}>
             <h1 className="font-bold text-3xl tracking-wider my-5">{props.modelName}</h1> 
             <p className="">{props.content}</p>
             

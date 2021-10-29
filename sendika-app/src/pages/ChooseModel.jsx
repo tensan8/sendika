@@ -25,7 +25,7 @@ function ChooseModel() {
     const chosenMethod = useSelector(state => state.data.type)
 
     const handleCardClick = (modelName) => {
-        if(modelName == "GraphConvModel") {
+        if(modelName === "GraphConvModel") {
             setGraphConvStatus(true);
             setAttentiveStatus(false);
         } else {
@@ -39,7 +39,7 @@ function ChooseModel() {
     return (
         <div>
             <StatusTracker status="choose model"/>
-            <div className="row">
+            <div className="row flex-wrap ">
                 {
                     Array.from(models.entries()).map((entry) => {
                         const [key, value] = entry;
@@ -60,8 +60,9 @@ function ChooseModel() {
                     })
                 }
             </div>
-            
-            <StatusSetter right={graphConvStatus || attentiveStatus} left={true} rightLink="/loading" leftLink="/singleSmile"/>
+            <div className="flex-grow flex justify-center items-center">
+                <StatusSetter right={graphConvStatus || attentiveStatus} left={true} rightLink="/loading" leftLink="/singleSmile"/>
+            </div>
         </div>
     )
 }

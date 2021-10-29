@@ -7,6 +7,8 @@ const singleSmile = (state = {}, action) => {
     switch (action.type) {
         case 'ADD_SMILE':
             return action.payload
+        case 'CLEAR_SMILE':
+            return {}
         default:
             return state
     }

@@ -25,7 +25,7 @@ function About() {
         //     </div>
             
         // </div>
-        <div className={"mainPart container mx-auto h-screen pt-32 md:pt-0 px-6 z-10 flex items-center justify-between"}>
+        <div className={"mainPart container mx-auto h-screen pt-52 md:pt-0 px-6 flex items-center justify-between"}>
             <div className={"row container mx-auto px-6 flex flex-col-reverse lg:flex-row justify-between items-center relative"}>
                 {/* Text */}
                 <div className={"left column w-full mb-16 md:mb-8 text-center lg:text-left"}>

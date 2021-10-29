@@ -23,6 +23,6 @@ export const getSinglePrediction = (datas, smile) => async (dispatch) => {
 
 export const clear = () => {
     return {
-        type: 'CLEAR'
+        type: 'CLEAR_PREDICTION'
     }
 }

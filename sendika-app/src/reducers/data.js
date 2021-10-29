@@ -16,6 +16,8 @@ const data = (state = {}, action) => {
                 ...state,
                 model: action.payload
             }
+        case 'CLEAR_DATA':
+            return {}
         default:
             return state
     }

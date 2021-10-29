@@ -8,7 +8,7 @@ const model = (state = {}, action) => {
         case 'GET_SINGLE_PREDICTION':
             return action.payload["data"]
         // Clearing the state for this reducer so the loading page will work
-        case 'CLEAR':
+        case 'CLEAR_PREDICTION':
             return {}
         default:
             return state

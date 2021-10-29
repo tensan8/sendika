@@ -18,6 +18,9 @@ module.exports = {
           primary: '#3AAFA9',
           inactive: '#AEC7C5'
         }
+      },
+      screens: {
+        'md-2': '840px'
       }
     }
   },
