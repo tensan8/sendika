@@ -33,12 +33,20 @@ function StatusSetter(props) {
             }
             else if (!props.valid || notFound) {
                 setShow(props.valid)
-                setClicked(true)
+                setClicked(true)              
             }
         }    
+        else if (history.location.pathname === "/ChooseModel") {
+            if(!right) {
+                setShow(props.valid)
+                setClicked(true)   
+            } else {
+                history.push(rightLink)
+            }
+        }
         else {
             history.push(rightLink)
-        }    
+        }   
     }
 
     return (
@@ -55,7 +63,7 @@ function StatusSetter(props) {
                                 </svg>
                             </span>
                             <p className="ml-3 font-medium text-white truncate">                                    
-                                <span>The SMILES is not valid</span>
+                                <span>{history.location.pathname === "/singleSmile" ? 'The SMILES is not valid' : 'Please choose a model'}</span>
                             </p>
                         </div>
                         <div className="order-2 flex-shrink-0 sm:order-3 sm:ml-3">

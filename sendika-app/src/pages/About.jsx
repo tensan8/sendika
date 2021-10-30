@@ -25,10 +25,10 @@ function About() {
         //     </div>
             
         // </div>
-        <div className={"mainPart container mx-auto h-screen pt-52 md:pt-0 px-6 flex items-center justify-between"}>
-            <div className={"row container mx-auto px-6 flex flex-col-reverse lg:flex-row justify-between items-center relative"}>
+        <div className={"mainPart mx-0 h-screen w-full pt-52 md:pt-0 px-6 flex items-center justify-between"}>
+            <div className={"row container h-full mx-auto px-6 flex flex-col-reverse lg:flex-row justify-between items-center relative"}>
                 {/* Text */}
-                <div className={"left column w-full mb-16 md:mb-8 text-center lg:text-left"}>
+                <div className={"left column w-full mb-16 md:mb-0 text-center lg:text-left"}>
                     <h1>Let's Meet The Team</h1>
                     <p>
                         &apos;pIC50 Hunters&apos; is the name of the team that was made by Alesandro and Bryan under the supervision of Dr. Lee Sue Han, Dr. Xavier Wezen Chee, and Dr. Joel Chia Ming Than.
