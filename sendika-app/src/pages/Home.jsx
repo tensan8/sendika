@@ -18,7 +18,7 @@ function Home() {
                 Inhibitor Prediction
             </h1>
             <p class="leading-normal text-2xl mb-8">
-                Check whether the molecule could be used as inhibitor for MDM2 or HIV dataset
+                Check whether a molecule could be used as an inhibitor against HIV-1 integrase
             </p>
             {/* <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                 Get started

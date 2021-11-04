@@ -1,6 +1,7 @@
 import axios from 'axios';
+import query from 'qs';
 
-const url = 'http://127.0.0.1:8000/model/';
+const url = 'https://sendika-server-v3.herokuapp.com/model/';
 const chemblURL = 'https://www.ebi.ac.uk/chembl/api/data'
 
 export const fetchPosts = () => axios.get(url);
@@ -41,10 +42,27 @@ export const getChemblID = async (data) => {
 
 export const getSinglePrediction = async (datas, smile) => {
     try {
-        const response = await axios.post("http://127.0.0.1:8000/model/predict-single-smile/", {
+        const response = await axios.post("https://sendika-server-v3.herokuapp.com/model/predict-single-smile/", {
             "smile_name": smile,
             "model": datas["model"]
         })
+
+        // const params = new URLSearchParams()
+        // params.append('smile_name', smile)
+        // params.append('model', datas['model'])
+
+        // const data = {
+        //     "smile_name": smile,
+        //     "model": datas["model"]
+        // }
+
+        // const response = await axios.post("https://sendika-server-v3.herokuapp.com/model/predict-single-smile/", query.stringify(data))
+        
+        // const response = await axios.post("https://sendika-server-v3.herokuapp.com/model/predict-single-smile/", query.stringify(data), {
+        //     headers: {
+        //         "Content-Type": "application/x-www-form-urlencoded"
+        //     }
+        // })
         return response
     } catch (error) {
         console.log(error.message)
